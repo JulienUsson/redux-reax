@@ -12,15 +12,24 @@
   "scripts": {
     "build": "nwb build-web-module",
     "clean": "nwb clean-module",
+    "lint": "eslint src --fix",
     "test": "nwb test",
     "test:coverage": "nwb test --coverage",
     "test:watch": "nwb test --server"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "nwb": "0.21.x"
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.14.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.4.0",
+    "nwb": "0.21.x",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.9.2"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "author": "Julien Usson",
   "homepage": "https://github.com/JulienUsson/reax",
   "license": "MIT",
