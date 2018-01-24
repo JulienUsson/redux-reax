@@ -1,1 +1,1 @@
-export default 'Welcome to test'
+export createModule from './createModule'
