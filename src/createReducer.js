@@ -1,7 +1,7 @@
 const DEFAULT = 'default'
 
-function createReducer(state, mutations) {
-  return (state = state, action) => {
+function createReducer(initialState, mutations) {
+  return (state = initialState, action) => {
     const { type, ...payload } = action
 
     const mutation = mutations[type] || mutations[DEFAULT]
