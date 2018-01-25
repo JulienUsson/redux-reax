@@ -1,8 +1,17 @@
 function createActions(actions) {
-  return Object.entries(actions).map(([key, value]) => ({
+  const actionsArray = Object.entries(actions).map(([key, value]) => ({
     [key]: payload => (dispatch, getState) =>
-      value({ dispatch, getState }, payload),
+      value(
+        {
+          commit: (name, payload) => dispatch({ type: name, payload }),
+          dispatch,
+          getState,
+        },
+        payload
+      ),
   }))
+
+  return Object.assign({}, ...actionsArray)
 }
 
 export default createActions
