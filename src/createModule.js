@@ -3,10 +3,17 @@ import createActions from './createActions'
 import createMutations from './createMutations'
 
 function createModule({ state, mutations, actions }) {
+  const reducer = createReducer(state, mutations)
+  const mutationsFunc = createMutations(mutations)
+  const actionsFunc = createActions(actions)
   return {
-    reducer: createReducer(state, mutations),
-    mutations: createMutations(mutations),
-    actions: createActions(actions),
+    reducer,
+    actionCreators: {
+      ...mutationsFunc,
+      ...actionsFunc,
+      mutations: mutationsFunc,
+      actions: actionsFunc,
+    },
   }
 }
 

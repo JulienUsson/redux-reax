@@ -1,6 +1,6 @@
 import { createModule } from 'reax'
 
-const { reducer, mutations, actions } = createModule({
+const { reducer, actionCreators } = createModule({
   state: {
     count: 1,
   },
@@ -26,4 +26,5 @@ const { reducer, mutations, actions } = createModule({
   },
 })
 
-export { reducer, mutations, actions }
+export const counterReducer = reducer
+export default actionCreators

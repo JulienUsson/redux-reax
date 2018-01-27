@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { mutations, actions } from './store/counter'
+import counter from './store/counter'
 
 const App = ({
   count,
@@ -25,11 +25,11 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  increment: () => dispatch(mutations.increment()),
-  incrementBy: amount => dispatch(mutations.incrementBy(amount)),
-  incrementAsync: () => dispatch(actions.incrementAsync()),
+  increment: () => dispatch(counter.increment()),
+  incrementBy: amount => dispatch(counter.incrementBy(amount)),
+  incrementAsync: () => dispatch(counter.incrementAsync()),
   incrementByAsync: (amount, timeout) =>
-    dispatch(actions.incrementByAsync(amount, timeout)),
+    dispatch(counter.incrementByAsync(amount, timeout)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
