@@ -7,7 +7,7 @@ function createReducer(initialState, mutations) {
     const mutation = mutations[type] || mutations[DEFAULT]
 
     if (mutation) {
-      return mutation(state, payload)
+      return mutation(state, ...payload)
     }
 
     return state

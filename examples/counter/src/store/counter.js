@@ -13,15 +13,15 @@ const { reducer, mutations, actions } = createModule({
     },
   },
   actions: {
-    incrementAsync({ commit }) {
+    incrementAsync({ commit }, timeout = 1000) {
       setTimeout(() => {
         commit('increment')
-      }, 1000)
+      }, timeout)
     },
-    incrementByAsync({ commit }, amount) {
+    incrementByAsync({ commit }, amount, timeout = 1000) {
       setTimeout(() => {
         commit('incrementBy', amount)
-      }, 1000)
+      }, timeout)
     },
   },
 })

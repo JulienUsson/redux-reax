@@ -14,7 +14,9 @@ const App = ({
     <button onClick={increment}>increment</button>
     <button onClick={() => incrementBy(2)}>increment by 2</button>
     <button onClick={incrementAsync}>async increment</button>
-    <button onClick={() => incrementByAsync(2)}>async increment by 2</button>
+    <button onClick={() => incrementByAsync(2, 100)}>
+      async increment by 2
+    </button>
   </div>
 )
 
@@ -26,7 +28,8 @@ const mapDispatchToProps = dispatch => ({
   increment: () => dispatch(mutations.increment()),
   incrementBy: amount => dispatch(mutations.incrementBy(amount)),
   incrementAsync: () => dispatch(actions.incrementAsync()),
-  incrementByAsync: amount => dispatch(actions.incrementByAsync(amount)),
+  incrementByAsync: (amount, timeout) =>
+    dispatch(actions.incrementByAsync(amount, timeout)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
