@@ -1,4 +1,4 @@
-const DEFAULT = 'default'
+export const DEFAULT = 'default'
 
 function createReducer(initialState, mutations) {
   return (state = initialState, action) => {
