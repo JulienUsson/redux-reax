@@ -14,14 +14,17 @@ const { reducer, creators } = createModule({
   },
   actions: {
     incrementAsync({ commit }, timeout = 1000) {
-      setTimeout(() => {
-        commit('increment')
-      }, timeout)
+      return new Promise(resolve => {
+        setTimeout(() => {
+          commit('increment')
+          resolve()
+        }, timeout)
+      })
     },
-    incrementByAsync({ commit }, amount, timeout = 1000) {
-      setTimeout(() => {
-        commit('incrementBy', amount)
-      }, timeout)
+    async incrementByAsync({ dispatch }, amount, timeout = 1000) {
+      for (let i = 0; i < amount; i++) {
+        await dispatch('incrementAsync', timeout)
+      }
     },
   },
 })

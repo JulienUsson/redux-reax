@@ -14,8 +14,8 @@ const App = ({
     <button onClick={increment}>increment</button>
     <button onClick={() => incrementBy(2)}>increment by 2</button>
     <button onClick={incrementAsync}>async increment</button>
-    <button onClick={() => incrementByAsync(2, 100)}>
-      async increment by 2
+    <button onClick={() => incrementByAsync(5, 200)}>
+      async increment by 5
     </button>
   </div>
 )
