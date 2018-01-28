@@ -5157,6 +5157,10 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
+react-reax@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/react-reax/-/react-reax-0.0.1.tgz#45b9a687287a209b0bb52edfef1814a4adbac68f"
+
 react-redux@^5.0.6:
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"

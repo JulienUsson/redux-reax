@@ -1,5 +1,5 @@
 {
-  "name": "reax",
+  "name": "react-reax",
   "version": "0.0.1",
   "description": "Vuex syntax for react",
   "main": "lib/index.js",
@@ -32,7 +32,7 @@
     "lint"
   ],
   "author": "Julien Usson",
-  "homepage": "https://github.com/JulienUsson/reax",
+  "homepage": "https://github.com/JulienUsson/react-reax",
   "license": "MIT",
-  "repository": "https://github.com/JulienUsson/reax"
+  "repository": "https://github.com/JulienUsson/react-reax"
 }

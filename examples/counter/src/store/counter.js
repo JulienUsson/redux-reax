@@ -1,4 +1,4 @@
-import { createModule } from 'reax'
+import { createModule } from 'react-reax'
 
 const { reducer, creators } = createModule({
   state: {
