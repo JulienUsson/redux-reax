@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import counter from './store/counter'
 
@@ -19,6 +20,14 @@ const App = ({
     </button>
   </div>
 )
+
+App.propTypes = {
+  count: PropTypes.number.isRequired,
+  increment: PropTypes.func.isRequired,
+  incrementBy: PropTypes.func.isRequired,
+  incrementAsync: PropTypes.func.isRequired,
+  incrementByAsync: PropTypes.func.isRequired,
+}
 
 const mapStateToProps = state => ({
   count: state.counter.count,
