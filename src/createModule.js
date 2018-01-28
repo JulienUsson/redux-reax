@@ -8,7 +8,7 @@ function createModule({ state, mutations, actions }) {
   const actionsFunc = createActions(actions)
   return {
     reducer,
-    actionCreators: {
+    creators: {
       ...mutationsFunc,
       ...actionsFunc,
       mutations: mutationsFunc,
