@@ -20,6 +20,9 @@ const { reducer, creators } = createModule({
   mutations: {...},
   actions: {...},
 })
+
+export const counterReducer = reducer
+export default creators
 ```
 
 ### State
@@ -57,6 +60,22 @@ const actions = {
         }, timeout)
     }
 }
+```
+
+### React-redux
+
+```Javascript
+import counter from './store/counter'
+
+const mapStateToProps = state => ({
+  count: state.counter.count,
+})
+
+const mapDispatchToProps = dispatch => ({
+  increment: () => dispatch(counter.increment()),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Component)
 ```
 
 ## Examples
