@@ -7,25 +7,11 @@ Inspired by [Redux Sauce](https://github.com/infinitered/reduxsauce) and [Vuex](
 
 # Why?
 
-Because i like the Vuex syntax and i like React. With Redux-reax you can write reducers and actions like this :
+Because i like the Vuex syntax and React. 
 
-```Javascript
-const { reducer, creators } = createModule({
-  state: {
-    count: 0,
-  },
-  mutations: {
-    increment: state => ({ count: state.count + 1 }),
-  },
-  actions: {
-    incrementAsync({ commit }, timeout = 1000) {
-      setTimeout(() => {
-        commit('increment')
-      }, timeout)
-    },
-  },
-})
-```
+With Redux-reax you can write reducers and actions like this :
+
+![example](./example.png)
 
 # Installation
 
