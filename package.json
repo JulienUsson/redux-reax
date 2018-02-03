@@ -1,7 +1,7 @@
 {
-  "name": "react-reax",
+  "name": "redux-reax",
   "version": "0.0.2",
-  "description": "Vuex syntax for react",
+  "description": "Use Vuex syntax with redux",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -32,7 +32,7 @@
     "lint"
   ],
   "author": "Julien Usson",
-  "homepage": "https://github.com/JulienUsson/react-reax",
+  "homepage": "https://github.com/JulienUsson/redux-reax",
   "license": "MIT",
-  "repository": "https://github.com/JulienUsson/react-reax"
+  "repository": "https://github.com/JulienUsson/redux-reax"
 }

@@ -1,20 +1,22 @@
-# React-reax
+# Redux-reax
 
-React-reax allows writing React/Redux app like a Vue/[Vuex](https://vuex.vuejs.org/) one.
+Use [Vuex](https://vuex.vuejs.org/) syntax with Redux.
 
-## Installation
+# Installation
 
-- Install [redux](https://redux.js.org/) and [react-redux](https://github.com/reactjs/react-redux)
-- Run `npm install --save react-reax` or `yarn add react-reax` to install react-reax
-- To use Actions you need to install [redux-thunk](https://github.com/gaearon/redux-thunk)
+- Install and configure [redux](https://redux.js.org/) and [react-redux](https://github.com/reactjs/react-redux)
+- Run `npm install --save redux-reax` to install redux-reax
+- Install and configure [redux-thunk](https://github.com/gaearon/redux-thunk) to use Actions
 
-## Usage
+# Usage
 
-### Create a module
+## Create a module
 
-A module can contain a state, mutations and actions
+A module contains a state, mutations and actions.
 
 ```Javascript
+import { createModule } from 'redux-reax'
+
 const { reducer, creators } = createModule({
   state: {...},
   mutations: {...},
@@ -25,7 +27,7 @@ export const counterReducer = reducer
 export default creators
 ```
 
-### State
+## State
 
 The state object contains the initial state of the module.
 
@@ -35,10 +37,10 @@ const state = {
 }
 ```
 
-### Mutations
+## Mutations
 
 Mutations is the only way to change state. Each mutations must return a new state object.
-:warning: Mutations Must Be Synchronous
+:warning: Mutations Must Be Synchronous.
 
 ```Javascript
 const mutations = {
@@ -48,7 +50,7 @@ const mutations = {
 }
 ```
 
-### Actions 
+## Actions 
 
 Actions are asynchronous mutations. It can commit mutations or dispatch actions.
 
@@ -62,7 +64,7 @@ const actions = {
 }
 ```
 
-### React-redux
+## Usage with react-redux
 
 ```Javascript
 import counter from './store/counter'
@@ -78,7 +80,7 @@ const mapDispatchToProps = dispatch => ({
 export default connect(mapStateToProps, mapDispatchToProps)(Component)
 ```
 
-## Examples
+# Examples
 
 - [Counter](https://github.com/JulienUsson/react-reax/tree/master/examples/counter)
 
@@ -89,11 +91,6 @@ $ npm install
 $ npm start # serve examples at localhost:3000
 ```
 
-## Todo
-
- - Getters
- - Namespacing
-
-## License
+# License
 
 [MIT](http://opensource.org/licenses/MIT)
