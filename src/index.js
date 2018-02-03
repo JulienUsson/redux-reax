@@ -1,4 +1,2 @@
-export createReducer, { DEFAULT } from './createReducer'
-export createMutations from './createMutations'
-export createActions from './createActions'
+export { DEFAULT } from './createReducer'
 export createModule from './createModule'
