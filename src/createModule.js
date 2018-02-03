@@ -4,15 +4,15 @@ import createMutations from './createMutations'
 
 function createModule({ state, mutations, actions }) {
   const reducer = createReducer(state, mutations)
-  const mutationsFunc = createMutations(mutations)
-  const actionsFunc = createActions(actions)
+  const mutationsCreators = createMutations(mutations)
+  const actionsCreators = createActions(actions)
   return {
     reducer,
     creators: {
-      ...mutationsFunc,
-      ...actionsFunc,
-      mutations: mutationsFunc,
-      actions: actionsFunc,
+      ...mutationsCreators,
+      ...actionsCreators,
+      mutations: mutationsCreators,
+      actions: actionsCreators,
     },
   }
 }
