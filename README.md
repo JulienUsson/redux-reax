@@ -1,6 +1,31 @@
 # Redux-reax
 
-Use [Vuex](https://vuex.vuejs.org/) syntax with Redux.
+An another way to write your Redux app. 
+Inspired by [Redux Sauce](https://github.com/infinitered/reduxsauce) and [Vuex](https://vuex.vuejs.org/en/).
+
+[![npm version](https://badge.fury.io/js/redux-reax.svg)](https://badge.fury.io/js/redux-reax)
+
+# Why?
+
+Because i like the Vuex syntax and i like React. With Redux-reax you can write reducers and actions like this :
+
+```Javascript
+const { reducer, creators } = createModule({
+  state: {
+    count: 0,
+  },
+  mutations: {
+    increment: state => ({ count: state.count + 1 }),
+  },
+  actions: {
+    incrementAsync({ commit }, timeout = 1000) {
+      setTimeout(() => {
+        commit('increment')
+      }, timeout)
+    },
+  },
+})
+```
 
 # Installation
 
