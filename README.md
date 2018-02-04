@@ -35,7 +35,7 @@ const { reducer, creators } = createModule({
 })
 
 export const counterReducer = reducer
-export default creators
+export const counterCreators = creators
 ```
 
 ## State
@@ -44,14 +44,14 @@ The state object contains the initial state of the module.
 
 ```Javascript
 const state = {
-    count: 1,
+    count: 0,
 }
 ```
 
 ## Mutations
 
 Mutations is the only way to change state. Each mutations must return a new state object.
-:warning: Mutations Must Be Synchronous.
+:warning: Mutations must be synchronous.
 
 ```Javascript
 const mutations = {
@@ -78,17 +78,13 @@ const actions = {
 ## Usage with react-redux
 
 ```Javascript
-import counter from './store/counter'
+import { counterCreators } from './store/counter'
 
 const mapStateToProps = state => ({
   count: state.counter.count,
 })
 
-const mapDispatchToProps = dispatch => ({
-  increment: () => dispatch(counter.increment()),
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Component)
+export default connect(mapStateToProps, counterCreators)(Component)
 ```
 
 # Examples

@@ -30,4 +30,4 @@ const { reducer, creators } = createModule({
 })
 
 export const counterReducer = reducer
-export default creators
+export const counterCreators = creators
