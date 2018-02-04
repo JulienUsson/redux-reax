@@ -1,6 +1,6 @@
 {
   "name": "redux-reax",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Use Vuex syntax with redux",
   "main": "lib/index.js",
   "module": "es/index.js",
