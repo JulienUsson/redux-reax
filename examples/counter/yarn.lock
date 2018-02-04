@@ -5308,9 +5308,9 @@ reduce-function-call@^1.0.1:
   dependencies:
     balanced-match "^0.4.2"
 
-redux-reax@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/redux-reax/-/redux-reax-0.0.2.tgz#0625167f6abea47b4e516944059854a73e5704ef"
+redux-reax@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/redux-reax/-/redux-reax-0.0.3.tgz#626fc7dd3c7711a55f5e9890829a1a5eb2c3300c"
 
 redux-thunk@^2.2.0:
   version "2.2.0"
